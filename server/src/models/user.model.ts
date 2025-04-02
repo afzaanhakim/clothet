@@ -3,7 +3,7 @@ import {Model, DataTypes, Sequelize, Optional, InferAttributes, InferCreationAtt
 
 import bcrypt from 'bcrypt';
 
-class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
+export class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
     declare id: CreationOptional<number>;
     declare email: string;
     declare password: string;
@@ -68,5 +68,7 @@ class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
         }
       });
     }
-  }
+}
+
+export default User;
 
